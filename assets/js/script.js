@@ -17,6 +17,7 @@ var hoursInfo = [
 var listRoot = $('#listRoot');
 
 
+
 hoursInfo.forEach(function(info) {
   var div = $('<div>').attr('id', info.hourId).addClass('row time-block');
   var hourDiv = $('<div>').addClass('col-2 col-md-1 hour text-center py-3').text(info.hourText);
@@ -28,7 +29,7 @@ hoursInfo.forEach(function(info) {
   div.append(hourDiv, textArea, button);
   listRoot.append(div);
 
-    $(document).ready(function(){
+$(document).ready(function(){
       let jsonData;
       let data;
       let textAreaEl = $('#hour-9').children('.description');
@@ -126,27 +127,116 @@ hoursInfo.forEach(function(info) {
 
 
 $(function () {
-  // TODO: Add a listener for click events on the save button. This code should
-  // use the id in the containing time-block as a key to save the user input in
-  // local storage. HINT: What does `this` reference in the click listener
-  // function? How can DOM traversal be used to get the "hour-x" id of the
-  // time-block containing the button that was clicked? How might the id be
-  // useful when saving the description in local storage?
-  //
 
+  let currentHour = dayjs().format('H');
+  console.log(currentHour);
+  var numeric = 'hour-9'.split('-')[1];
+          var value9 = parseInt(numeric);
+          console.log(value9);
+          
+          if (value9 < currentHour) {
+            $('#hour-9').children('.description').addClass('past');
+          } else if (value9 == currentHour) {
+            $('#hour-9').children('.description').addClass('present');
+          } else if (value9 > currentHour) {
+            $('#hour-9').children('.description').addClass('future');
+          }
 
+      numeric = 'hour-10'.split('-')[1];
+          var value10 = parseInt(numeric);
+          console.log(value10);
+          
+          if (value10 < currentHour) {
+            $('#hour-10').children('.description').addClass('past');
+          } else if (value10 == currentHour) {
+            $('#hour-10').children('.description').addClass('present');
+          } else if (value10 > currentHour) {
+            $('#hour-10').children('.description').addClass('future');
+          }
 
-  // TODO: Add code to apply the past, present, or future class to each time
-  // block by comparing the id to the current hour. HINTS: How can the id
-  // attribute of each time-block be used to conditionally add or remove the
-  // past, present, and future classes? How can Day.js be used to get the
-  // current hour in 24-hour time?
-  //
-  // TODO: Add code to get any user input that was saved in localStorage and set
-  // the values of the corresponding textarea elements. HINT: How can the id
-  // attribute of each time-block be used to do this?
-  //
-  // TODO: Add code to display the current date in the header of the page.
+      numeric = 'hour-11'.split('-')[1];
+          var value11 = parseInt(numeric);
+          console.log(value11);
+          
+          if (value11 < currentHour) {
+            $('#hour-11').children('.description').addClass('past');
+          } else if (value11 == currentHour) {
+            $('#hour-11').children('.description').addClass('present');
+          } else if (value11 > currentHour) {
+            $('#hour-11').children('.description').addClass('future');
+          }
+
+      numeric = 'hour-12'.split('-')[1];
+          var value12 = parseInt(numeric);
+          console.log(value12);
+          
+          if (value12 < currentHour) {
+            $('#hour-12').children('.description').addClass('past');
+          } else if (value12 == currentHour) {
+            $('#hour-12').children('.description').addClass('present');
+          } else if (value12 > currentHour) {
+            $('#hour-12').children('.description').addClass('future');
+          }
+
+      numeric = 'hour-13'.split('-')[1];
+          var value13 = parseInt(numeric);
+          console.log(value13);
+          
+          if (value13 < currentHour) {
+            $('#hour-13').children('.description').addClass('past');
+          } else if (value13 == currentHour) {
+            $('#hour-13').children('.description').addClass('present');
+          } else if (value13 > currentHour) {
+            $('#hour-13').children('.description').addClass('future');
+          }
+
+      numeric = 'hour-14'.split('-')[1];
+          var value14 = parseInt(numeric);
+          console.log(value14);
+          
+          if (value14 < currentHour) {
+            $('#hour-14').children('.description').addClass('past');
+          } else if (value14 == currentHour) {
+            $('#hour-14').children('.description').addClass('present');
+          } else if (value14 > currentHour) {
+            $('#hour-14').children('.description').addClass('future');
+          }
+
+      numeric = 'hour-15'.split('-')[1];
+          var value15 = parseInt(numeric);
+          console.log(value15);
+          
+          if (value15 < currentHour) {
+            $('#hour-15').children('.description').addClass('past');
+          } else if (value15 == currentHour) {
+            $('#hour-15').children('.description').addClass('present');
+          } else if (value15 > currentHour) {
+            $('#hour-15').children('.description').addClass('future');
+          }
+
+      numeric = 'hour-16'.split('-')[1];
+          var value16 = parseInt(numeric);
+          console.log(value16);
+          
+          if (value16 < currentHour) {
+            $('#hour-16').children('.description').addClass('past');
+          } else if (value16 == currentHour) {
+            $('#hour-16').children('.description').addClass('present');
+          } else if (value16 > currentHour) {
+            $('#hour-16').children('.description').addClass('future');
+          }
+
+      numeric = 'hour-17'.split('-')[1];
+          var value17 = parseInt(numeric);
+          console.log(value17);
+          
+          if (value17 < currentHour) {
+            $('#hour-17').children('.description').addClass('past');
+          } else if (value17 == currentHour) {
+            $('#hour-17').children('.description').addClass('present');
+          } else if (value17 > currentHour) {
+            $('#hour-17').children('.description').addClass('future');
+          }
 
   var today = dayjs();
   $('#currentDay').text(today.format('dddd, MMMM D'));
