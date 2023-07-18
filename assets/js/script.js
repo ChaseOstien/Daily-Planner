@@ -33,7 +33,7 @@ $(document).ready(function(){
       let jsonData;
       let data;
       let textAreaEl = $('#hour-9').children('.description');
-      textAreaEl.val(localStorage.getItem('9AM'));
+      textAreaEl.val(JSON.parse(localStorage.getItem('9AM')));
       $('#hour-9').children('.saveBtn').click(function() {
         var eventInfo = $.trim($('#hour-9').children('.description').val());
         if (eventInfo !== '') {
@@ -43,7 +43,7 @@ $(document).ready(function(){
           }
         });
         textAreaEl = $('#hour-10').children('.description');
-      textAreaEl.val(localStorage.getItem('10AM'));
+      textAreaEl.val(JSON.parse(localStorage.getItem('10AM')));
       $('#hour-10').children('.saveBtn').click(function() {
         eventInfo = $.trim($('#hour-10').children('.description').val());
         if (eventInfo !== '') {
@@ -53,7 +53,7 @@ $(document).ready(function(){
           }
         });
         textAreaEl = $('#hour-11').children('.description');
-      textAreaEl.val(localStorage.getItem('11AM'));
+      textAreaEl.val(JSON.parse(localStorage.getItem('11AM')));
       $('#hour-11').children('.saveBtn').click(function() {
         eventInfo = $.trim($('#hour-11').children('.description').val());
         if (eventInfo !== '') {
@@ -63,7 +63,7 @@ $(document).ready(function(){
           }
         });
         textAreaEl = $('#hour-12').children('.description');
-      textAreaEl.val(localStorage.getItem('12PM'));
+      textAreaEl.val(JSON.parse(localStorage.getItem('12PM')));
       $('#hour-12').children('.saveBtn').click(function() {
         eventInfo = $.trim($('#hour-12').children('.description').val());
         if (eventInfo !== '') {
@@ -73,7 +73,7 @@ $(document).ready(function(){
           }
         });
         textAreaEl = $('#hour-13').children('.description');
-      textAreaEl.val(localStorage.getItem('1PM'));
+      textAreaEl.val(JSON.parse(localStorage.getItem('1PM')));
       $('#hour-13').children('.saveBtn').click(function() {
         eventInfo = $.trim($('#hour-13').children('.description').val());
         if (eventInfo !== '') {
@@ -83,7 +83,7 @@ $(document).ready(function(){
           }
         });
         textAreaEl = $('#hour-14').children('.description');
-      textAreaEl.val(localStorage.getItem('2PM'));
+      textAreaEl.val(JSON.parse(localStorage.getItem('2PM')));
       $('#hour-14').children('.saveBtn').click(function() {
         eventInfo = $.trim($('#hour-14').children('.description').val());
         if (eventInfo !== '') {
@@ -93,7 +93,7 @@ $(document).ready(function(){
           }
         });
         textAreaEl = $('#hour-15').children('.description');
-      textAreaEl.val(localStorage.getItem('3PM'));
+      textAreaEl.val(JSON.parse(localStorage.getItem('3PM')));
       $('#hour-15').children('.saveBtn').click(function() {
         eventInfo = $.trim($('#hour-15').children('.description').val());
         if (eventInfo !== '') {
@@ -103,7 +103,7 @@ $(document).ready(function(){
           }
         });
         textAreaEl = $('#hour-16').children('.description');
-      textAreaEl.val(localStorage.getItem('4PM'));
+      textAreaEl.val(JSON.parse(localStorage.getItem('4PM')));
       $('#hour-16').children('.saveBtn').click(function() {
         eventInfo = $.trim($('#hour-16').children('.description').val());
         if (eventInfo !== '') {
@@ -113,7 +113,7 @@ $(document).ready(function(){
           }
         });
         textAreaEl = $('#hour-17').children('.description');
-      textAreaEl.val(localStorage.getItem('5PM'));
+      textAreaEl.val(JSON.parse(localStorage.getItem('5PM')));
       $('#hour-17').children('.saveBtn').click(function() {
         eventInfo = $.trim($('#hour-17').children('.description').val());
         if (eventInfo !== '') {
@@ -126,7 +126,7 @@ $(document).ready(function(){
   });
 
 
-$(function () {
+$(document).ready(function () {
 
   let currentHour = dayjs().format('H');
   console.log(currentHour);
