@@ -63,9 +63,8 @@ hoursInfo.forEach(function(j) {
           } else if (value > currentHour) {
             $('#' + j.hourId).children('.description').addClass('future');
           }
-
+        });
 
   var today = dayjs();
     $('#currentDay').text(today.format('dddd, MMMM D'));
-  });
 });
